@@ -1,0 +1,25 @@
+//Imports 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap');
+
+// Variables
+$primary: #A53860;
+$secondary: #4C3B4D;
+$success: #028090;
+$danger: #E84855;
+$white: #F8F8F8;
+$dark: #333135;
+$ligthDark: #524E55;
+
+//Mixins
+@mixin flex($direction: row, $justify: center, $align: center){
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin titles ($size, $weight, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}

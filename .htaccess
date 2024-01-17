@@ -1,0 +1,21 @@
+RewriteEngine On
+
+# USERS
+RewriteRule ^inscription$ /controllers/registerController.php
+RewriteRule ^connexion$ /controllers/loginController.php
+RewriteRule ^deconnexion$ /controllers/logoutController.php
+RewriteRule ^mon-compte$ /controllers/accountController.php
+RewriteRule ^modifier-mon-compte$ /controllers/updateAccountController.php
+RewriteRule ^compte-supprime$ index.php?deleteAccount=true
+
+# PAGES
+RewriteRule ^contact$ /controllers/contactController.php
+RewriteRule ^blog$ /controllers/blogController.php
+RewriteRule ^add$ /controllers/addArticleController.php
+RewriteRule ^seemore$ /controllers/seemoreController.php
+RewriteRule ^edit$ /controllers/editController.php
+RewriteRule ^editcomments$ /controllers/editCommentsController.php
+
+
+# ADMIN
+RewriteRule ^dashboard$ /controllers/adminController.php

@@ -1,0 +1,60 @@
+@use 'commons' as *;
+
+form {
+    @include flex(column, center, left);
+
+    label {
+        font-weight: bold;
+        margin-top: 0.5rem;
+    }
+
+    input {
+        &:not([type="submit"]) {
+            border: none;
+            border-bottom: 1px solid $dark;
+            margin: 0.5rem 0;
+            padding: 0.4rem;
+        }
+
+        &:focus {
+            outline: none;
+            border-bottom: 2px solid $primary;
+        }
+
+        &[type="checkbox"] {
+            margin: 0;
+            margin-right: 0.3rem;
+            padding: 0;
+
+            +label {
+                font-weight: unset;
+            }
+        }
+
+        &[type="submit"] {
+            background-color: $success;
+            border: none;
+            border-radius: 25px;
+            color: $white;
+            margin: auto;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            width: fit-content;
+        }
+    }
+
+    .errorsMessage {
+        color: $danger;
+    }
+}
+
+button {
+    background-color: $danger;
+    border: none;
+    border-radius: 25px;
+    color: $white;
+    margin: auto;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    width: fit-content;
+}

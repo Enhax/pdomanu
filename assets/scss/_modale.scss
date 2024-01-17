@@ -1,0 +1,23 @@
+#modalContainer {
+    background-color: rgba(0, 0, 0, 0.3);
+    display: none;
+        align-items: center;
+        justify-content: center;
+    height: 100%;
+    position: fixed;
+        left: 0;
+        top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+#modal {
+    background-color: whitesmoke;
+    padding: 1rem;
+    width: 50%;
+}
+
+#closeBtn {
+    cursor: pointer;
+    float: right;
+}

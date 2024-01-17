@@ -1,0 +1,44 @@
+@use 'commons' as *;
+
+.quickAccessContainer {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+
+    @media all and (max-width: 963px) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quickAccess {
+        text-align: center;
+        background-color: $primary;
+        color: $white;
+        padding: 1rem;
+        border-radius: 5px;
+    }
+}
+
+.lastAddedContainer {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr);
+    @media all and (max-width: 963px) {
+        grid-template-columns: 1fr;
+    }
+    .lastAdded {
+        padding: 1rem;
+        h3 {
+            color: $primary;
+            font-variant: small-caps;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            tr, th, td {
+                border: 1px solid $primary;
+                padding: 0.5rem;
+                text-align: center;
+            }
+        }
+    }
+}

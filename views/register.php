@@ -1,6 +1,6 @@
 <h1>Inscription</h1>
-<?php if(isset($success)) { ?>
-    <p><?= $success ?></p>
+<?php if(isset($success['register'])) { ?>
+    <p><?= $success['register'] ?></p>
 <?php } ?>
 <form action="/inscription" method="post">
     <label for="email">Adresse mail</label>

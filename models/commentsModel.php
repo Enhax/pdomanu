@@ -42,7 +42,7 @@ class Comments
     }
 
     public function displayComments(){
-        $sql = 'SELECT `pab7o_comments`.`id`, `content`, DATE_FORMAT(`publicationDate`,"Le %d/%m/%Y à %Hh%i") as `publicationDateFr`, `pab7o_users`.`username` as `username`
+        $sql = 'SELECT `pab7o_comments`.`id`, `content`, DATE_FORMAT(`publicationDate`,"Le %d/%m/%Y à %Hh%i") as `publicationDateFr`, `pab7o_users`.`username` as `username`, `pab7o_comments`.`id_users`
         FROM `pab7o_comments` JOIN `pab7o_users`
         ON `pab7o_comments`.`id_users` = `pab7o_users`.`id`
         WHERE `pab7o_comments`.`id_posts` = :id_posts

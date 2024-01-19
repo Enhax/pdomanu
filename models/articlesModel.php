@@ -27,14 +27,14 @@ class Articles
 
     public function displayAll()
     {
-        $sql = 'SELECT `id`, `title`, `content`, DATE_FORMAT(`publicationDate`,"Le %d/%m/%Y à %Hh%i") as `publicationDate`,`image`, `id_postsCategories` FROM `pab7o_articles`';
+        $sql = 'SELECT `id`, `title`, `content`, DATE_FORMAT(`publicationDate`,"Le %d/%m/%Y à %Hh%i") as `publicationDate`,`image`, `id_users`, `id_postsCategories` FROM `pab7o_articles`';
         $req = $this->pdo->query($sql);
         return $req->fetchAll(PDO::FETCH_OBJ);
     }
 
     public function displayOne()
     {
-        $sql = 'SELECT `title`, `content`, DATE_FORMAT(`publicationDate`,"Le %d/%m/%Y à %Hh%i") as `publicationDate`, `updateDate`, `image`, `id_postsCategories` FROM `pab7o_articles` WHERE `id` = :id';
+        $sql = 'SELECT `title`, `content`, DATE_FORMAT(`publicationDate`,"Le %d/%m/%Y à %Hh%i") as `publicationDate`, `updateDate`, `image`, `id_users`, `id_postsCategories` FROM `pab7o_articles` WHERE `id` = :id';
         $req = $this->pdo->prepare($sql);
         $req->bindValue(':id', $this->id, PDO::PARAM_INT);
         $req->execute();

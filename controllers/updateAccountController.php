@@ -87,7 +87,7 @@ if(isset($_POST['updatePassword'])) {
 
     if(empty($errors)) {
         if($user->updatePassword()){
-            $success = USERS_PASSWORD_UPDATE_SUCCESS;
+            $success['udpate'] = USERS_PASSWORD_UPDATE_SUCCESS;
         } else {
             $errors['update'] = USERS_PASSWORD_UPDATE_ERROR;
         }

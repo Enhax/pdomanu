@@ -9,31 +9,27 @@ $comments = new Comments;
 $articles = new Articles;
 $article = $articles->displayAll();
 
-
 if(!empty($_GET['id'])){   
     $id = clean($_GET['id']);
     $id = (int)$id;
     $comments->id = $id;
     $coms = $comments->displayOneComment();
+    var_dump($comments);
 }
 
-
-if($_SERVER['REQUEST_METHOD'] == 'POST'){
-
+if(isset($_POST['modify'])){
 
     if(!empty($_POST['content'])){
         $comments->content = clean($_POST['content']);
     }
-
-    
+  
     if(empty($errors)){
         $comments->editComments();
-        $success['editArticle'] = 'Le commentaire a bien été modifié';
-        header('Location: /seemore'. '?id=' . $comments->id);
+        $success['editcomments'] = 'Le commentaire a bien été modifié';
+        
     } else{
-        $error['editArticle'] = 'Le commentaire n\'a pas été modifié';
-    }
-    
+        $error['editcomments'] = 'Le commentaire n\'a pas été modifié';
+    }   
 }
 
 

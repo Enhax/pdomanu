@@ -17,12 +17,11 @@ for (let omb of openModalBtn) {
         let deleteId = deleteAttribute.substring(8, deleteAttribute.length)
         deleteInput.setAttribute('name', 'delete' + deleteElement)
         deleteInput.value = deleteId;
-        if(deleteElement == 'article'){
-elementToDelete.textContent =  'l\'article'
-        } else if(deleteElement == 'comment'){
-            elementToDelete.textContent =  'le commentaire'
+        if (deleteElement == 'article') {
+            elementToDelete.textContent = 'l\'article'
+        } else if (deleteElement == 'comment') {
+            elementToDelete.textContent = 'le commentaire'
         }
-
         modalContainer.style.display = "flex"
     })
 }

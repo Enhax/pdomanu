@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
     if (empty($errors)) {
         if($user->create()) {
-            $success = 'L\'utilisateur a bien été créé';
+            $success['register'] = 'L\'utilisateur a bien été créé';
         }
     }
 }

@@ -1,38 +1,36 @@
 <?php
 session_start();
-var_dump($_POST);
+
 require_once '../models/articlesModel.php';
 require_once '../models/commentsModel.php';
 require_once '../models/usersModel.php';
 require_once 'formValidation.php';
 
+
 $article = new Articles;
 $comments = new Comments;
 $user = new Users;
 
-if(!empty($_POST['deletearticle']))
-{
+if (!empty($_POST['deletearticle'])) {
     $article->id = $_POST['deletearticle'];
     $article->delete();
-    var_dump($article);
     header('Location: /blog');
 }
 
-if(!empty($_POST['deletecomment']))
-{
+if (!empty($_POST['deletecomment'])) {
     $comments->id = $_POST['deletecomment'];
     $comments->deleteComments();
+    $success['deletecomment'] = 'Le commentaire a bien bien été supprimé';
+} else{
+    $error['deletecomment'] = 'Le commentaire n\'a pas été supprimé';
 }
 
 if (!empty($_GET['id'])) {
     (int)$id = clean($_GET['id']);
-
     $article->id = $id;
     $user->id = $_SESSION['user']['id'];
-
     $art = $article->displayOne();
-    $comments->id_posts = $id;
-
+    $comments->id_posts = $id;   
     $coms = $comments->displayComments();
 }
 
@@ -42,13 +40,12 @@ if (isset($_POST['addComment'])) {
         $comments->id_users = $_SESSION['user']['id'];
         $comments->id_posts = $article->id;
         if (empty($errors)) {
-            $comment = $comments->create();           
+            $comment = $comments->create();
         } else {
             $errors['comment'] = 'Un problème est survenue, veuillez recommencer';
         }
     }
 }
-
 
 
 require_once '../views/parts/header.php';

@@ -1,6 +1,6 @@
 <h1>Modifier mon compte</h1>
-<?php if (isset($success)) { ?>
-    <p><?= $success ?></p>
+<?php if (isset($success['udpate'])) { ?>
+    <p><?= $success['udpate'] ?></p>
 <?php } ?>
 <form action="/modifier-mon-compte" method="post">
     <label for="email">Adresse mail</label>

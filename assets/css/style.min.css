@@ -24,6 +24,10 @@ h1{
   padding:40px;
 }
 
+.row div:last-child p{
+  height:unset;
+}
+
 .row div p::first-letter{
   float:left;
   font-size:40px;
@@ -303,6 +307,12 @@ body footer .footerSubTitle {
   resize: none;
   border:0;
   outline:none;
+}
+
+.artest{
+  height:400px;
+  display:flex;
+  flex-wrap:wrap;
 }
 
 

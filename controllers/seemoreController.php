@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+var_dump($_POST);
 require_once '../models/articlesModel.php';
 require_once '../models/commentsModel.php';
 require_once '../models/usersModel.php';
@@ -10,6 +10,19 @@ $article = new Articles;
 $comments = new Comments;
 $user = new Users;
 
+if(!empty($_POST['deletearticle']))
+{
+    $article->id = $_POST['deletearticle'];
+    $article->delete();
+    var_dump($article);
+    header('Location: /blog');
+}
+
+if(!empty($_POST['deletecomment']))
+{
+    $comments->id = $_POST['deletecomment'];
+    $comments->deleteComments();
+}
 
 if (!empty($_GET['id'])) {
     (int)$id = clean($_GET['id']);
@@ -23,7 +36,7 @@ if (!empty($_GET['id'])) {
     $coms = $comments->displayComments();
 }
 
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if (isset($_POST['addComment'])) {
     if (!empty($_POST['comment'])) {
         $comments->content = clean($_POST['comment']);
         $comments->id_users = $_SESSION['user']['id'];
@@ -35,6 +48,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
     }
 }
+
+
 
 require_once '../views/parts/header.php';
 require_once '../views/seemore.php';

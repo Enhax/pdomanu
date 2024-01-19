@@ -29,14 +29,12 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     if(empty($errors)){
         $comments->editComments();
         $success['editArticle'] = 'Le commentaire a bien été modifié';
+        header('Location: /seemore'. '?id=' . $comments->id);
     } else{
         $error['editArticle'] = 'Le commentaire n\'a pas été modifié';
     }
+    
 }
-
-
-
-
 
 
 require '../views/parts/header.php';

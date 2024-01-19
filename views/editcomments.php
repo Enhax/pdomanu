@@ -22,16 +22,17 @@
             <?php endif ?>
 
             <button style="background-color:#0f0;"><a style="cursor:pointer;text-decoration:none;color:#fff;" href="/seemore <?= '?id=' . $coms->id_posts ?> ">Retour</a></button>&nbsp;&nbsp;&nbsp;
-            <button type="submit" style="background-color:#09f;">Modifier</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <button id="openModalBtn" style="cursor:pointer;text-decoration:none;color:#fff;background-color:#f00">Supprimer</button>
+            <button type="submit" style="background-color:#09f;cursor:pointer;">Modifier</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <button id="openModalBtn3" style="cursor:pointer;text-decoration:none;color:#fff;background-color:#f00">Supprimer</button>
     </form>
-    <div id="modalContainer">
-        <div class="modal" id="modal">
-            <h3 id="modalText" style="margin: 0 auto;">êtes vous bien sûr de vouloir supprimer l'article?</h3>
-            <span style="font-size:30px;" id="closeBtn">&times;</span>
-            <button><a style="cursor:pointer;text-decoration:none;color:#fff;" href="../controllers/deleteController.php<?= '?id=' . $comments->id ?>">SUPPRIMER</a></button>
+    <div id="modalContainer3">
+        <div class="modal" id="modal3">
+            <h3 id="modalText3" style="margin: 0 auto;">êtes vous bien sûr de vouloir supprimer l'article?</h3>
+            <span style="font-size:30px;" id="closeBtn3">&times;</span>
+            <button><a style="cursor:pointer;text-decoration:none;color:#fff;" href="../controllers/deleteCommentsController.php<?= '?id=' . $comments->id ?>">SUPPRIMER</a></button>
         </div>
     </div>
     </div>
+
 
 </main>

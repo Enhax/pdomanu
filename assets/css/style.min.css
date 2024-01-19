@@ -225,44 +225,8 @@ button {
   float: right;
 }
 
-.modalContainers{
-  background-color: rgba(0, 0, 0, 0.3);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
 
-.containers{
-  background-color: rgba(0, 0, 0, 0.3);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  z-index: 1;
-}
-
-.modal2 {
-  background-color: whitesmoke;
-  padding: 1rem;
-  width: 50%;
-}
-
-.closeBtn2 {
-  cursor: pointer;
-  float: right;
-  z-index:100;
-}
-
+/* ---------------------------- */
 body {
   display: flex;
   flex-direction: column;

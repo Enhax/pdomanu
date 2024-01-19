@@ -55,7 +55,7 @@ class Comments
 
     public function editComments()
     {
-        $sql = 'UPDATE `pab7o_comments` `content`=:content WHERE `id` = :id';
+        $sql = 'UPDATE `pab7o_comments` SET `content`=:content WHERE `id` = :id';
         $req = $this->pdo->prepare($sql);
         $req->bindValue(':content', $this->content, PDO::PARAM_STR);
         $req->bindValue(':id', $this->id, PDO::PARAM_INT);

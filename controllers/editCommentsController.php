@@ -14,7 +14,6 @@ if(!empty($_GET['id'])){
     $id = (int)$id;
     $comments->id = $id;
     $coms = $comments->displayOneComment();
-    var_dump($comments);
 }
 
 if(isset($_POST['modify'])){

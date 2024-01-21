@@ -35,4 +35,6 @@ modalContainer.addEventListener("click", (e) => {
     }
 })
 
-
+tinymce.init({
+    selector: 'textarea#default'
+  });

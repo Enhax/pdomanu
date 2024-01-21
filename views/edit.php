@@ -11,7 +11,7 @@
             </div>
             <div>
                 <label>Content</label>
-                <textarea name="content" row="20" col="10" style="resize:none";><?= $art->content ?></textarea>
+                <textarea class="mytextarea" name="content"><?= $art->content ?></textarea>
                 <?php if(!empty($errors['content'])): ?>
                 <?= $errors['content'] ?>
                 <?php endif ?>

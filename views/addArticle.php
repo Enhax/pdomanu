@@ -13,7 +13,7 @@
             </div>
             <div>
             <label>Content</label>
-            <textarea name="content"></textarea>
+            <textarea class="mytextarea" name="content"></textarea>
             <?php if(isset($errors['content'])): ?>
             <?= $errors['content'] ?>
            <?php endif ?>

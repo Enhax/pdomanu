@@ -23,9 +23,9 @@
             <li><a href="/">Accueil</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/inscription">Inscription</a></li>
+            <li><a href="/add">Ajouter un article</a></li>
             <?php if (!empty($_SESSION) && $_SESSION['user']['id_usersRoles'] == 258) : ?>
-                <li><a href="/add">Ajouter un article</a></li>
-
+            
             <?php endif ?>
             <?php if (empty($_SESSION['user'])) { ?>
                 <li><a href="/connexion">Connexion</a></li>

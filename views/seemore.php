@@ -20,7 +20,7 @@
         <div class="comment" style="margin-top:30px;">
             <label style="margin-top:10px;">Nouveau commentaire</label>
             <form method="POST">
-                <textarea name="comment" placeholder="Qu'en penses-tu <?= $_SESSION['user']['username'] ?>?" rows="10" style="width:800px;resize:none;padding:10px;" value="<?php if (!empty($comments->content)) : ?><?= $comments->content ?><?php endif ?>"></textarea>
+                <textarea class="mytextarea" name="comment" placeholder="Qu'en penses-tu <?= $_SESSION['user']['username'] ?>?" rows="10" style="width:800px;resize:none;padding:10px;" value="<?php if (!empty($comments->content)) : ?><?= $comments->content ?><?php endif ?>"></textarea>
                 <button type="submit" name="addComment" style="cursor:pointer;">Envoyer</button>
             </form>
             <?php if (!empty($success['deletecomment'])) : ?>

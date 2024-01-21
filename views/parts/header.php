@@ -9,16 +9,18 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.min.css">
+    <script src="https://cdn.tiny.cloud/1/akyczp5d9dn0xe1rj5vunh4311ayl8w8k4g0mptuxzb7n6em/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+    
 </head>
 
 <body>
-    <nav>       
+    <nav>
         <ul>
             <li><a href="/">Accueil</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/inscription">Inscription</a></li>
-          <?php  if(!empty($_SESSION) && $_SESSION['user']['id_usersRoles'] == 258): ?>
-            <li><a href="/add">Ajouter un article</a></li>
+            <?php if (!empty($_SESSION) && $_SESSION['user']['id_usersRoles'] == 258) : ?>
+                <li><a href="/add">Ajouter un article</a></li>
 
             <?php endif ?>
             <?php if (empty($_SESSION['user'])) { ?>

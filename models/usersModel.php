@@ -54,7 +54,8 @@ class Users
             $this->pdo = new PDO('mysql:host=localhost;dbname=corrections_pdo_la-manu-post;charset=utf8', DB_USER, DB_PASSWORD);
         } catch (PDOException $e) {
             // Si la connexion à échouée, je redirige l'utilisateur vers la page d'accueil (nous le renverrons vers une page d'erreur plus tard)
-            header('Location: /index.php');
+            header('Location: /erreur-connexion');
+            exit();
         }
     }
 

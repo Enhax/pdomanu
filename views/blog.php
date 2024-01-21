@@ -13,7 +13,7 @@
             <img src="<?= $article->image ?>"><br>
             <small><?= $article->publicationDate ?></small>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <a href="/seemore<?= '?id='. $article->id ?>">Voir</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-            <?php if ($article->id_users == $_SESSION['user']['id']) : ?>
+            <?php if (!empty($_SESSION['user']) && $article->id_users == $_SESSION['user']['id']) : ?>
             <a href="/edit<?= '?id='. $article->id ?>">Modifier</a>
             <?php endif ?>
         </div>

@@ -15,7 +15,7 @@ RewriteRule ^add$ /controllers/addArticleController.php
 RewriteRule ^seemore$ /controllers/seemoreController.php
 RewriteRule ^edit$ /controllers/editController.php
 RewriteRule ^editcomments$ /controllers/editCommentsController.php
-
+RewriteRule ^erreur-connexion$ /controllers/errorConnexionController.php
 
 # ADMIN
 RewriteRule ^dashboard$ /controllers/adminController.php

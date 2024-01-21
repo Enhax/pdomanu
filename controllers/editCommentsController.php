@@ -19,7 +19,7 @@ if(!empty($_GET['id'])){
 if(isset($_POST['modify'])){
 
     if(!empty($_POST['content'])){
-        $comments->content = clean($_POST['content']);
+        $comments->content = trim($_POST['content']);
     }
   
     if(empty($errors)){
